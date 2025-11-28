@@ -1,34 +1,33 @@
 .about {
     background-color: var(--background);
-    position: relative;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     border-bottom: 1px solid var(--border);
 }
 
-.about::before {
-    display: none;
-}
-
 .header {
-    margin-bottom: 5rem;
-    max-width: 800px;
-    border-left: 4px solid var(--primary);
-    padding-left: 2rem;
+    margin-bottom: 6rem;
+    max-width: 900px;
+    border-left: none;
+    /* Remove border for cleaner look */
+    padding-left: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .subTitle {
     color: var(--primary);
     font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     display: block;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
 .mainTitle {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     font-weight: 800;
     margin-bottom: 2rem;
     line-height: 1.2;
@@ -37,9 +36,9 @@
 }
 
 .description {
-    color: var(--foreground);
-    font-size: 1.1rem;
-    line-height: 1.7;
+    color: var(--text-secondary);
+    font-size: 1.15rem;
+    line-height: 1.8;
     margin-bottom: 2rem;
     font-weight: 400;
 }
@@ -48,14 +47,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 
 .card {
-    background: #fff;
-    border: 1px solid var(--border);
-    padding: 3rem;
-    border-radius: 4px;
+    background: var(--surface);
+    /* Light grey background instead of white border */
+    border: none;
+    /* Remove border */
+    padding: 4rem;
+    border-radius: 0;
+    /* Sharp corners like JoongAng */
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -85,17 +87,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(20, 20, 20, 0.5);
-    /* Reduced opacity */
+    background: rgba(0, 0, 0, 0.6);
+    /* Darker overlay for better text contrast on hover */
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 1;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    border-color: var(--primary);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
 }
 
 .card:hover::before {
@@ -106,7 +107,7 @@
     opacity: 1;
 }
 
-/* Placeholder Images for Hover Effect */
+/* Placeholder Images for Hover Effect - Keep existing */
 .card:nth-child(1):hover {
     background-image: url('/images/practical_education_hover.jpg');
 }
@@ -125,17 +126,17 @@
 
 .checkIcon {
     color: var(--primary);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     position: relative;
     z-index: 2;
     transition: color 0.3s ease;
 }
 
 .cardTitle {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--foreground);
     position: relative;
     z-index: 2;
@@ -143,10 +144,9 @@
 }
 
 .cardDesc {
-    color: var(--foreground);
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.8;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
     position: relative;
     z-index: 2;
     transition: color 0.3s ease;
@@ -157,16 +157,19 @@
 .card:hover .cardDesc {
     color: #fff;
     opacity: 1;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    /* Added shadow */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 768px) {
     .mainTitle {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 2.5rem;
     }
 }

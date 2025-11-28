@@ -1,25 +1,40 @@
 :root {
-  /* Vintage Earth/Space Palette */
+  /* JoongAng Corporate Style Palette */
   --primary: #5A6450;
-  /* Olive Green (Main) */
-  --primary-light: #6E7864;
-  /* Muted Green (Sub) */
-  --background: #F5F5F0;
-  /* Off White/Cream (Sub) */
-  --surface: #E1E1DC;
-  /* Light Beige (Sub) */
-  --foreground: #2C302C;
-  /* Dark Charcoal/Green for text */
-  --accent: #AA4632;
-  /* Rust Red (Accent) */
+  /* Woodie Olive (Brand Identity) */
+  --primary-dark: #464F3E;
 
-  --primary-glow: rgba(90, 100, 80, 0.2);
-  --border: #D1D1CC;
+  --background: #FFFFFF;
+  /* Clean White */
+  --surface: #F8F8F8;
+  /* Light Grey Section Background */
+  --surface-dark: #F0F0F0;
+  /* Slightly darker grey for cards */
 
-  --font-main: var(--font-outfit), sans-serif;
+  --foreground: #111111;
+  /* Deep Black for Headings */
+  --text-secondary: #555555;
+  /* Dark Grey for Body */
+  --text-tertiary: #888888;
+  /* Light Grey for meta info */
 
-  --container-width: 1200px;
-  --section-padding: 100px 0;
+  --border: #E5E5E5;
+  /* Subtle Border */
+  --border-dark: #DDDDDD;
+
+  --accent: #5A6450;
+  /* Use Primary as Accent for consistency */
+
+  --font-main: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --container-width: 1280px;
+  /* Wider container for corporate feel */
+  --section-padding: 120px 0;
+  /* More breathing room */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -32,9 +47,25 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text-secondary);
+  /* Default to secondary text for body */
   font-family: var(--font-main);
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  /* Crisp text */
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--foreground);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  /* Tight tracking for headings */
 }
 
 a {
@@ -140,6 +171,28 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
