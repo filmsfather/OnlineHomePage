@@ -1,0 +1,96 @@
+.curriculum {
+    background-color: var(--background);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.note {
+    color: var(--foreground);
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.table th,
+.table td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.table th {
+    background: var(--surface);
+    color: var(--primary);
+    font-weight: 700;
+    white-space: nowrap;
+    border-bottom: 2px solid var(--border);
+}
+
+.table td {
+    color: var(--foreground);
+    vertical-align: top;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.weekCol {
+    font-weight: 700;
+    color: var(--primary) !important;
+    width: 80px;
+    text-align: center !important;
+    background: rgba(90, 100, 80, 0.05);
+}
+
+.table tr:hover td {
+    background: rgba(0, 0, 0, 0.01);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}

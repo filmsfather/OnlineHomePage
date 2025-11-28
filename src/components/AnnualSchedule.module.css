@@ -1,0 +1,135 @@
+.schedule {
+    background-color: var(--surface);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--foreground);
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: #fff;
+    margin-bottom: 4rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.table th,
+.table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.table th {
+    background: var(--background);
+    color: var(--primary);
+    font-weight: 700;
+    white-space: nowrap;
+    border-bottom: 2px solid var(--border);
+}
+
+.table td {
+    color: var(--foreground);
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover td {
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.infoCard {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.infoTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.checkIcon {
+    color: var(--primary);
+}
+
+.infoDesc {
+    color: var(--foreground);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.qrSection {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.applyBtn {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.applyBtn:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .infoGrid {
+        grid-template-columns: 1fr;
+    }
+}

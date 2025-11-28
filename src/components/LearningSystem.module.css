@@ -1,0 +1,226 @@
+.system {
+    background-color: var(--background);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.textContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sixStepGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 4rem auto 0;
+}
+
+.stepCard {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.stepCard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(20, 20, 20, 0.9);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.stepCard:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stepCard:hover::after {
+    opacity: 1;
+}
+
+/* Placeholders */
+.stepCard:nth-child(odd):hover {
+    background-image: url('/images/hero_vintage.png');
+}
+
+.stepCard:nth-child(even):hover {
+    background-image: url('/images/about_vintage_bg.png');
+}
+
+.stepHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    transition: border-color 0.3s ease;
+}
+
+.stepCard:hover .stepHeader {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.stepLabel {
+    background: var(--primary);
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.stepCard:hover .stepLabel {
+    background: #fff;
+    color: var(--primary);
+}
+
+.stepTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+.stepCard:hover .stepTitle {
+    color: #fff;
+}
+
+.stepDesc {
+    color: var(--foreground);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.stepCard:hover .stepDesc {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.dataSection {
+    margin-top: 8rem;
+    text-align: left;
+    background: #fff;
+    padding: 4rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+
+.programHeader {
+    margin-bottom: 4rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2rem;
+}
+
+.programTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.programIntro {
+    color: var(--foreground);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.programList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.programItem {
+    background: var(--background);
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.programItem:hover {
+    border-color: var(--primary);
+}
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.checkIcon {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.itemTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--foreground);
+}
+
+.quote {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-style: italic;
+    display: block;
+}
+
+.itemDesc {
+    color: var(--foreground);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+    .sixStepGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .programTitle {
+        font-size: 2rem;
+    }
+}

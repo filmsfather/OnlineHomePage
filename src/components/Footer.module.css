@@ -1,0 +1,77 @@
+.footer {
+    background-color: var(--primary);
+    /* Olive Green Background */
+    padding: 4rem 0;
+    margin-top: 4rem;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.brand p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: 0.95rem;
+}
+
+.link:hover {
+    color: #fff;
+}
+
+.ctaSection {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.ctaTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.ctaBtn {
+    display: inline-block;
+    background: #fff;
+    color: var(--primary);
+    padding: 1rem 3rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+    background: var(--surface);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .ctaTitle {
+        font-size: 1.8rem;
+    }
+}
